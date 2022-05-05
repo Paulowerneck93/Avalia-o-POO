@@ -4,6 +4,7 @@ class Main {
     Disciplina historia = new Disciplina("Hist", 80, "Paulo");
     Disciplina geografia = new Disciplina("Geog", 60, "Jose");
     Disciplina portugues = new Disciplina("Port", 40, "Bruna");
+    Disciplina matematica = new Disciplina("Port", 40, "Bruna");
 
     Curso cienciaDaComputacao = new Curso("CPU", historia, geografia, portugues);
 
