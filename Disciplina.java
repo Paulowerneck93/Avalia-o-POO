@@ -1,17 +1,22 @@
 class Disciplina{
   String nome;
   float notaFinal;
-  Professor professor = new Professor();
-  Curso curso = new Curso();
-  
+  Professor professor;
+
+  Disciplina (String nomeDisciplina, float notaFinal, String nomeProfessor){
+    professor = new Professor (nomeProfessor);
+    nome = nomeDisciplina;
+    this.notaFinal = notaFinal;
+  }
 
   void exibirRelatorioDisc(){
-    System.out.println(nome);  
-    System.out.println(professor);
-    System.out.println(curso);
+    System.out.println(
+      "Disciplina: " + nome +
+      "\nProfessor: " + professor.nome +
+      "\nNota Final: " + notaFinal); 
 
   }
   float retornarNotaFinal(){
-    return 0;
+    return notaFinal;
   }
 }

@@ -1,17 +1,22 @@
 class Aluno{
   String nome;
   int matricula;
-  Curso curso = new Curso();
+  Curso curso;
 
-    Aluno(String n, int codigo){
-
+    Aluno(String n, int m, Curso c){
     nome = n;
-    matricula = codigo;
+    matricula = m;
+    curso = c;
+    
   }
   
   void exibirRelatorio(){
-    System.out.println(nome);  
-    System.out.println(curso);
+    System.out.println(
+      "Nome: " + nome +
+      "\nCurso: " + curso.nome +
+      "\nAprovado: " + (curso.aprovado()? "Sim":"Não")
+      
+    );  
 
   }
 
